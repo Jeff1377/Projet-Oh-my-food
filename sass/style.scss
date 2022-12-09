@@ -1,21 +1,45 @@
-h1, h2, h3, h4, div, ul, li, section, header, body, article, footer, nav, a, p, i, img {
-    margin:0;
-    padding:0;
+h1, h2, h3, h4, div, ul, li, section, header, form, body, article, footer, nav, a, p, i, img {
+    margin: 0;
+    padding: 0;
 }
 
-@media screen and (max-width:767px) {
-    #bloc_logo {
-        display:flex;
+
+#bloc_logo {
+    display: flex;
+    width: 100%;
+    height: 63px;
+    border: 1px dotted black;
+    background-color: #ffffff;
+    img {
+    width: 162px;
+    margin: auto;
+    }
+}
+
+#recherche {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color:#EAEAEA;
+    form {
         width: 100%;
-        height: 63px;
-        border: 1px dotted black;
-        background-color: #ffffff;
     }
-
-    #bloc_logo img {
-        width:162px;
+    p {
+        display: flex;
+        width: 100%;
+    }
+    i {
+        width: 12px;
+        height: 16px;
+        padding-top:25px;
+    }
+    input {
+        width: 40%;
+        height:19px;
+        background-color: #EAEAEA;;
+    }
+    #bloc_loca_search {
         margin: auto;
-        
     }
-}
 
+}
