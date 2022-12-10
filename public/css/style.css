@@ -1,15 +1,25 @@
-h1, h2, h3, h4, div, ul, li, section, header, form, body, article, footer, nav, a, p, i, img {
+#bloc_logo {
+  font-family: 'Shrikhand', arial, cursive; }
+
+h1, h2, h3, h4, div, ul, li, section, header, form, body, article, footer, nav, a, p, i, input, img {
   margin: 0;
   padding: 0; }
+
+body {
+  max-width: 767px;
+  margin-right: auto;
+  margin-left: auto; }
 
 #bloc_logo {
   display: flex;
   width: 100%;
   height: 63px;
-  border: 1px dotted black;
+  box-shadow: 0 6px 8px grey;
   background-color: #ffffff; }
-  #bloc_logo img {
-    width: 162px;
+  #bloc_logo p {
+    font-weight: 400;
+    line-height: 43,74px;
+    font-size: 30px;
     margin: auto; }
 
 #recherche {
@@ -18,16 +28,14 @@ h1, h2, h3, h4, div, ul, li, section, header, form, body, article, footer, nav, 
   height: 50px;
   background-color: #EAEAEA; }
   #recherche form {
-    width: 100%; }
-  #recherche p {
     display: flex;
     width: 100%; }
   #recherche i {
     width: 12px;
     height: 16px;
-    padding-top: 25px; }
+    padding-top: 15px; }
   #recherche input {
-    width: 40%;
+    width: 100%;
     height: 19px;
     background-color: #EAEAEA; }
   #recherche #bloc_loca_search {
