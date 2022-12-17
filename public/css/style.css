@@ -15,7 +15,7 @@ h2 {
 h3 {
   font-weight: 500;
   font-size: 16px;
-  line-height: 18,75px; }
+  line-height: 19px; }
 
 h4 {
   font-weight: 400;
@@ -52,28 +52,30 @@ body {
 
 #recherche {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 50px;
-  background-color: #D2D2D2;
+  background-color: #EAEAEA;
   box-shadow: inset 0px 4px 5px 0px rgba(0, 0, 0, 0.2); }
-  #recherche form {
-    display: flex;
-    width: 100%; }
-  #recherche i {
-    width: 12px;
-    height: 16px;
-    padding-top: 15px; }
-  #recherche input {
-    width: 100%;
-    height: 19px;
-    background-color: #D2D2D2;
-    border: none;
-    outline: none; }
-  #recherche #bloc_loca_search {
-    margin: auto; }
+  #recherche #recherche_1 {
+    display: flex; }
+    #recherche #recherche_1 i {
+      width: 12px;
+      height: 16px; }
+    #recherche #recherche_1 form {
+      padding-left: 10px; }
+      #recherche #recherche_1 form input {
+        height: 19px;
+        background-color: #EAEAEA;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px; }
 
 #header_fin {
-  background-color: #EAEAEA;
+  background-color: #F7F7F7;
   width: 100%;
   height: 300px; }
   #header_fin .titre_header {
@@ -128,7 +130,7 @@ body {
       margin-right: 20px; }
       #fonctionnement #fonctionnement_2 a .card {
         display: flex;
-        background-color: #EAEAEA;
+        background-color: #F7F7F7;
         margin-left: 32,5px;
         margin-right: 20px;
         padding: 35px 0 35px 35px; }
@@ -141,7 +143,8 @@ body {
 #main {
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #EAEAEA; }
+  background-color: #F7F7F7;
+  height: 1490px; }
   #main #cards_titre {
     padding-top: 60px;
     padding-bottom: 25px; }

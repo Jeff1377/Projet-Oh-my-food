@@ -18,7 +18,7 @@ h2 {
 h3 {
     font-weight: 500;
     font-size: 16px;
-    line-height: 18,75px;
+    line-height: 19px;
 }
 
 h4 {
@@ -63,38 +63,39 @@ body {
 
 #recherche {
     display: flex;
+    justify-content: center;
+    align-items:center;
     width: 100%;
     height: 50px;
-    background-color: #D2D2D2;
+    background-color: #EAEAEA;
     box-shadow: inset 0px 4px 5px 0px rgba(0,0,0,0.2);
 
-    form {
+    #recherche_1 {
         display: flex;
-        width: 100%;
-    }
 
-    i {
-        width: 12px;
-        height: 16px;
-        padding-top: 15px;
-        
-    }
+        i {
+            width: 12px;
+            height: 16px;
+        }
 
-    input {
-        width: 100%;
-        height: 19px;
-        background-color: #D2D2D2;
-        border: none;
-        outline: none;
-    }
-
-    #bloc_loca_search {
-        margin: auto;
+        form {
+            padding-left:10px;
+            
+            input {
+                height: 19px;
+                background-color: #EAEAEA;
+                border: none;
+                outline: none;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
     }
 }
 
 #header_fin {
-    background-color: #EAEAEA;
+    background-color: #F7F7F7;
     width: 100%;
     height: 300px;
 
@@ -175,7 +176,7 @@ body {
 
             .card {
                 display: flex;
-                background-color: #EAEAEA;
+                background-color: #F7F7F7;
                 
                 margin-left: 32,5px;
                 margin-right: 20px;
@@ -198,7 +199,8 @@ body {
 #main {
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #EAEAEA;
+    background-color: #F7F7F7;
+    height: 1490px;
 
     #cards_titre {
         padding-top: 60px;
@@ -246,6 +248,7 @@ body {
                     }
                 }
                 .heart {
+
                     i {
                         width: 21,68px;
                         height: 21px;
