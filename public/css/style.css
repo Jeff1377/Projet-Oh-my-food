@@ -94,51 +94,84 @@ body {
       text-align: center;
       color: #353535; }
   #header_fin a {
-    text-decoration: none; }
-  #header_fin .btn_violet_gros {
-    width: 55%;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 27px;
-    height: 50px;
-    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); }
-    #header_fin .btn_violet_gros :hover {
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 0,3s; }
+    #header_fin a :hover {
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); }
-    #header_fin .btn_violet_gros h3 {
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-      color: #ffffff;
-      width: 100%; }
+    #header_fin a .btn_violet_gros {
+      width: 55%;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 27px;
+      height: 50px;
+      background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+      border-radius: 25px; }
+      #header_fin a .btn_violet_gros :hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); }
+      #header_fin a .btn_violet_gros h3 {
+        text-align: center;
+        color: #ffffff;
+        width: 100%; }
 
 #fonctionnement {
   width: 100%;
-  height: 450px; }
+  height: 550px; }
   #fonctionnement #fonctionnement_1 {
     padding-top: 48px;
     padding-left: 20px;
     padding-bottom: 30px; }
   #fonctionnement #fonctionnement_2 {
-    width: 100%; }
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column; }
     #fonctionnement #fonctionnement_2 a {
       text-decoration: none;
       display: flex;
-      margin-left: 20px;
-      margin-right: 20px; }
+      width: 100%;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      transition: 0,3s; }
+      #fonctionnement #fonctionnement_2 a :hover {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); }
       #fonctionnement #fonctionnement_2 a .card {
+        width: 90%;
         display: flex;
         background-color: #F7F7F7;
-        margin-left: 32,5px;
-        margin-right: 20px;
-        padding: 35px 0 35px 35px; }
+        padding: 35px 0px 35px 0px;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 20px; }
+        #fonctionnement #fonctionnement_2 a .card p {
+          position: relative;
+          right: 10px;
+          background-color: #9356DC;
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 14,1818px;
+          line-height: 17px;
+          padding: 5px 8px 5px 8px;
+          border-radius: 20px; }
         #fonctionnement #fonctionnement_2 a .card i {
-          color: #9356DC; }
-        #fonctionnement #fonctionnement_2 a .card h3 {
-          color: #000000;
-          padding-left: 50px; }
+          color: #7E7E7E;
+          position: relative;
+          left: 10px;
+          padding-top: 5px; }
+          #fonctionnement #fonctionnement_2 a .card i :hover {
+            color: #9356DC; }
+        #fonctionnement #fonctionnement_2 a .card .container {
+          width: 80%;
+          display: flex;
+          padding-top: 5px; }
+          #fonctionnement #fonctionnement_2 a .card .container h3 {
+            color: #000000;
+            margin-left: auto;
+            margin-right: auto; }
 
 #main {
   padding-left: 20px;
