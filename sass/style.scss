@@ -53,7 +53,7 @@ body {
     background-color: #ffffff;
     font-family: 'Shrikhand', arial, cursive;
 
-    p {
+    h1 {
     font-weight: 400;
     line-height: 43,74px;
     font-size: 30px;
@@ -124,13 +124,7 @@ body {
 
     a {
         text-decoration: none;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-        transition: 0,3s;
         
-        :hover {
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-        }
-    
         .btn_violet_gros {
             width: 55%;
             display: flex;
@@ -141,8 +135,10 @@ body {
             height: 50px;
             background-image: linear-gradient(to bottom right, #FF79DA,#9356DC);
             border-radius: 25px;
-            
-            :hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            transition: 0,3s;
+
+            &:hover {
                 box-shadow: 0 8px 20px rgba(0,0,0,0.25);
             }
 
@@ -180,13 +176,7 @@ body {
             display: flex;
             width: 100%;
             margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            transition: 0,3s;
-
-            :hover {
-                box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            }
-
+            
             .card {
                 width: 90%;
                 display: flex;
@@ -195,9 +185,17 @@ body {
                 margin-right:auto;
                 margin-left:auto;
                 border-radius:20px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+                transition: 0,3s;
+
+                &:hover {
+                    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+
+                    i {
+                        color: #9356DC;
+                    }
+                }
                 
-                
-            
                 p {
                     position: relative;
                     right: 10px;
@@ -215,10 +213,6 @@ body {
                     position: relative;
                     left:10px;
                     padding-top: 5px;
-
-                    :hover {
-                        color: #9356DC;
-                    }
                 }
 
                 .container {
@@ -252,51 +246,102 @@ body {
         display: flex;
         flex-direction: column;
         
+        a {
+            text-decoration: none;
+            color: #000000;
 
-        .illustr_card {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: 0,3s;
-            margin-bottom: 20px;
+            .illustr_card {
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                transition: 0,3s;
+                margin-bottom: 20px;
 
-            :hover {
-                box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-            }
-
-            img {
-                width:100%;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-                height: 233px;
-                object-fit: cover;
-            }
-
-            .container {
-                padding-top: 10px;
-                background-color: #ffffff;
-                display: flex;
-                border-bottom-left-radius: 15px;
-                border-bottom-right-radius: 15px;
-
-                .description {
-                    padding-left: 10px;
-
-                    h2 {
-                        padding-bottom: 3px;
-                    }
-
-                    p {
-                        padding-bottom: 20px;
-                    }
+                &:hover {
+                    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
                 }
-                .heart {
 
-                    i {
-                        width: 21,68px;
-                        height: 21px;
-                        border: #000000;
+                img {
+                    width:100%;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    height: 233px;
+                    object-fit: cover;
+                }
+
+                .container {
+                    padding-top: 10px;
+                    background-color: #ffffff;
+                    display: flex;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    justify-content: space-between;
+
+                    .description {
+                        padding-left: 10px;
+
+                        h2 {
+                            padding-bottom: 3px;
+                        }
+
+                        p {
+                            padding-bottom: 20px;
+                        }
+                    }
+                    
+                    .heart {
+
+                        i {
+                            padding-right:30px;
+                            font-size: 25px;
+                            border: #000000;
+
+                            &:hover {
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+footer {
+    color: #ffffff;
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+
+    .footer_title {
+        font-family: 'Shrikhand', arial, cursive;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        p {
+            font-weight: 400;
+            line-height: 26,24px;
+            font-size: 18px;  
+        }
+    }
+
+    .footer_part_1 {
+        display: flex;
+        padding-bottom: 5px;
+
+        h3 {
+            padding-left: 5px;
+
+            &:first-child {
+                padding-left: 15px;
+            }
+        }
+    }
+
+    .footer_part_2 {
+        padding-bottom: 5px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
     }
 }
