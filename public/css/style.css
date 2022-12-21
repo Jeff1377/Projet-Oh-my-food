@@ -103,12 +103,14 @@ body {
       margin-right: auto;
       margin-top: 27px;
       height: 50px;
-      background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+      background-color: #9356DC;
       border-radius: 25px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-      transition: 0,3s; }
-      #header_fin a .btn_violet_gros:hover {
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); }
+      transition: 0,3s;
+      transition: background-color 500ms; }
+      #header_fin a .btn_violet_gros:active {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        background-color: #FF79DA; }
       #header_fin a .btn_violet_gros h3 {
         text-align: center;
         color: #ffffff;
@@ -143,9 +145,9 @@ body {
         border-radius: 20px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         transition: 0,3s; }
-        #fonctionnement #fonctionnement_2 a .card:hover {
+        #fonctionnement #fonctionnement_2 a .card:active {
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); }
-          #fonctionnement #fonctionnement_2 a .card:hover i {
+          #fonctionnement #fonctionnement_2 a .card:active i {
             color: #9356DC; }
         #fonctionnement #fonctionnement_2 a .card p {
           position: relative;
@@ -189,7 +191,7 @@ body {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         transition: 0,3s;
         margin-bottom: 20px; }
-        #main #main_cards a .illustr_card:hover {
+        #main #main_cards a .illustr_card:active {
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); }
         #main #main_cards a .illustr_card img {
           width: 100%;

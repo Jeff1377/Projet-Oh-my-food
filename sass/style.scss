@@ -133,13 +133,15 @@ body {
             margin-right: auto;
             margin-top: 27px;
             height: 50px;
-            background-image: linear-gradient(to bottom right, #FF79DA,#9356DC);
+            background-color: #9356DC;
             border-radius: 25px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.25);
             transition: 0,3s;
+            transition: background-color 500ms;
 
-            &:hover {
+            &:active {
                 box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+                background-color: #FF79DA;
             }
 
             h3 {
@@ -188,7 +190,7 @@ body {
                 box-shadow: 0 4px 15px rgba(0,0,0,0.15);
                 transition: 0,3s;
 
-                &:hover {
+                &:active {
                     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 
                     i {
@@ -255,7 +257,7 @@ body {
                 transition: 0,3s;
                 margin-bottom: 20px;
 
-                &:hover {
+                &:active {
                     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
                 }
 
@@ -294,7 +296,7 @@ body {
                             font-size: 25px;
                             border: #000000;
 
-                            &:hover {
+                            &:active {
 
                             }
                         }
