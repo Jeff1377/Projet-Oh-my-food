@@ -38,6 +38,43 @@ body {
   margin-left: auto;
   font-family: 'Roboto', arial, sans-serif; }
 
+/*.loader-container {
+    position: absolute;
+    background: #FF79DA;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 10001;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+
+
+    .dot {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 15px;
+        animation: loader infinite 0.3s alternate;
+        background: #99E2D0;
+    
+        .d2 {
+            animation-delay: 0,05s;
+        }
+    
+        .d3 {
+            animation-delay: 0,1s;
+        }
+    }
+    
+
+    
+    @keyframes loader {
+        100% {
+            transform: translateY(-30px);
+        }
+    }
+}*/
 #bloc_logo {
   display: flex;
   width: 100%;
@@ -107,7 +144,7 @@ body {
       border-radius: 25px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
       transition: background-color 500ms; }
-      #header_fin a .btn_violet_gros:active {
+      #header_fin a .btn_violet_gros:hover {
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
         background-color: #FF79DA; }
       #header_fin a .btn_violet_gros h3 {
@@ -138,14 +175,14 @@ body {
         width: 90%;
         display: flex;
         background-color: #F7F7F7;
-        padding: 35px 0px 35px 0px;
+        padding: 25px 0px 25px 0px;
         margin-right: auto;
         margin-left: auto;
         border-radius: 20px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); }
-        #fonctionnement #fonctionnement_2 a .card:active {
+        #fonctionnement #fonctionnement_2 a .card:hover {
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); }
-          #fonctionnement #fonctionnement_2 a .card:active i {
+          #fonctionnement #fonctionnement_2 a .card:hover i {
             color: #9356DC; }
         #fonctionnement #fonctionnement_2 a .card p {
           position: relative;
@@ -189,7 +226,7 @@ body {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         transition: 0,3s;
         margin-bottom: 20px; }
-        #main #main_cards a .illustr_card:active {
+        #main #main_cards a .illustr_card:hover {
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); }
         #main #main_cards a .illustr_card img {
           width: 100%;
@@ -203,7 +240,9 @@ body {
           display: flex;
           border-bottom-left-radius: 15px;
           border-bottom-right-radius: 15px;
-          justify-content: space-between; }
+          justify-content: space-between;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px; }
           #main #main_cards a .illustr_card .container .description {
             padding-left: 10px; }
             #main #main_cards a .illustr_card .container .description h2 {
@@ -255,6 +294,29 @@ footer {
       flex-direction: row; }
       #fonctionnement #fonctionnement_2 a .card i {
         left: 0px; }
+  #main {
+    height: 390px; }
+    #main #main_cards {
+      flex-direction: row;
+      justify-content: space-between; }
+      #main #main_cards a {
+        width: 20%; }
+        #main #main_cards a .illustr_card {
+          width: 100%; }
+          #main #main_cards a .illustr_card img {
+            height: 100px; }
+          #main #main_cards a .illustr_card .container {
+            height: 70px; }
+            #main #main_cards a .illustr_card .container .description h2 {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px; }
+            #main #main_cards a .illustr_card .container .description p {
+              font-weight: 200;
+              font-size: 14px;
+              line-height: 16px; }
+            #main #main_cards a .illustr_card .container .heart i {
+              padding-right: 10px; }
   footer {
     flex-direction: row;
     height: 100px;
