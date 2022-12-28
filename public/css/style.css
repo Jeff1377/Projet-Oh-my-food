@@ -18,11 +18,16 @@ h3 {
   line-height: 19px; }
 
 h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 14px; }
+
+h5 {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px; }
 
-h5 {
+h6 {
   font-weight: 300;
   font-size: 18px;
   line-height: 21px; }
@@ -38,40 +43,39 @@ body {
   margin-left: auto;
   font-family: 'Roboto', arial, sans-serif; }
 
-/*.loader-container {
-    position: absolute;
+/*.loader {
+    $animation-duration: 2s;
+    $animation-count: 2;
+    position: fixed;
+    inset: 0;
     background: #FF79DA;
-    width: 100%;
-    height: 100%;
+    opacity: 0.9;
     display: flex;
-    z-index: 10001;
+    z-index: 3;
     justify-content: center;
     align-items: center;
-    transition: opacity 1s ease-in-out;
+    animation: loader 200ms $animation-duration*$animation-count forwards;
 
-
-    .dot {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin: 0 15px;
-        animation: loader infinite 0.3s alternate;
-        background: #99E2D0;
-    
-        .d2 {
-            animation-delay: 0,05s;
+        &::after {
+            content: "";
+            height: 100px;
+            width: 100px;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #99E2D0;
+            border-radius: 50%;
+            animation: spin $animation-duration infinite ease-in-out;
+            animation-iteration-count: 2;
         }
     
-        .d3 {
-            animation-delay: 0,1s;
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
         }
     }
-    
 
-    
     @keyframes loader {
-        100% {
-            transform: translateY(-30px);
+        to {
+            transform: translateY(-100vh);
         }
     }
 }*/
@@ -114,7 +118,7 @@ body {
 #header_fin {
   background-color: #F7F7F7;
   width: 100%;
-  height: 300px; }
+  height: 340px; }
   #header_fin .titre_header {
     margin-left: auto;
     margin-right: auto;
@@ -125,28 +129,27 @@ body {
   #header_fin .texte_header {
     width: 80%;
     margin-left: auto;
-    margin-right: auto;
-    padding-top: 15px; }
-    #header_fin .texte_header h5 {
+    margin-right: auto; }
+    #header_fin .texte_header h6 {
       text-align: center;
       color: #353535; }
   #header_fin a {
     text-decoration: none; }
     #header_fin a .btn_violet_gros {
-      width: 55%;
+      width: 220px;
       display: flex;
       align-items: center;
       margin-left: auto;
       margin-right: auto;
       margin-top: 27px;
       height: 50px;
-      background-color: #9356DC;
+      background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
       border-radius: 25px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-      transition: background-color 500ms; }
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); }
       #header_fin a .btn_violet_gros:hover {
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-        background-color: #FF79DA; }
+        transition: background-color 500ms;
+        filter: brightness(130%); }
       #header_fin a .btn_violet_gros h3 {
         text-align: center;
         color: #ffffff;
@@ -181,7 +184,10 @@ body {
         border-radius: 20px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); }
         #fonctionnement #fonctionnement_2 a .card:hover {
-          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); }
+          cursor: pointer;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+          transition: background-color 500ms;
+          background-color: #F5EDFF; }
           #fonctionnement #fonctionnement_2 a .card:hover i {
             color: #9356DC; }
         #fonctionnement #fonctionnement_2 a .card p {
@@ -213,7 +219,7 @@ body {
   padding-right: 20px;
   background-color: #F7F7F7;
   height: 1490px; }
-  #main #cards_titre {
+  #main #card_titre {
     padding-top: 60px;
     padding-bottom: 25px; }
   #main #main_cards {
@@ -227,13 +233,25 @@ body {
         transition: 0,3s;
         margin-bottom: 20px; }
         #main #main_cards a .illustr_card:hover {
-          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); }
+          cursor: pointer;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+          filter: brightness(110%); }
         #main #main_cards a .illustr_card img {
           width: 100%;
           border-top-left-radius: 15px;
           border-top-right-radius: 15px;
           height: 233px;
           object-fit: cover; }
+        #main #main_cards a .illustr_card .img-texte {
+          font-weight: 500;
+          line-height: 16px;
+          font-size: 14px;
+          color: #008756;
+          background-color: #99E2D0;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          width: 20%;
+          text-align: center; }
         #main #main_cards a .illustr_card .container {
           padding-top: 10px;
           background-color: #ffffff;
@@ -251,8 +269,14 @@ body {
               padding-bottom: 20px; }
           #main #main_cards a .illustr_card .container .heart i {
             padding-right: 30px;
-            font-size: 25px;
-            border: #000000; }
+            font-size: 25px; }
+            #main #main_cards a .illustr_card .container .heart i:hover {
+              background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+              background-size: 100%;
+              -webkit-text-fill-color: transparent;
+              -moz-text-fill-color: transparent;
+              -webkit-background-clip: text;
+              -moz-background-clip: text; }
 
 footer {
   color: #ffffff;
@@ -267,7 +291,7 @@ footer {
     padding-bottom: 20px; }
     footer .footer_title p {
       font-weight: 400;
-      line-height: 26,24px;
+      line-height: 26px;
       font-size: 18px; }
   footer .footer_part_1 {
     display: flex;
@@ -316,6 +340,7 @@ footer {
               font-size: 14px;
               line-height: 16px; }
             #main #main_cards a .illustr_card .container .heart i {
+              padding-top: 5px;
               padding-right: 10px; }
   footer {
     flex-direction: row;
@@ -330,3 +355,55 @@ footer {
     footer .footer_part_1 h3 {
       padding-left: 5px;
       padding-bottom: 0px; } }
+
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  body {
+    max-width: 1400px; }
+  #fonctionnement {
+    height: 300px; }
+    #fonctionnement #fonctionnement_2 {
+      flex-direction: row; }
+      #fonctionnement #fonctionnement_2 a .card i {
+        left: 0px; }
+  #main {
+    height: 390px; }
+    #main #main_cards {
+      flex-direction: row;
+      justify-content: space-between; }
+      #main #main_cards a {
+        width: 20%; }
+        #main #main_cards a .illustr_card {
+          width: 100%; }
+          #main #main_cards a .illustr_card img {
+            height: 100px; }
+          #main #main_cards a .illustr_card .container {
+            height: 70px; }
+            #main #main_cards a .illustr_card .container .description h2 {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px; }
+            #main #main_cards a .illustr_card .container .description p {
+              font-weight: 200;
+              font-size: 14px;
+              line-height: 16px; }
+            #main #main_cards a .illustr_card .container .heart i {
+              padding-right: 10px; }
+  footer {
+    flex-direction: row;
+    height: 100px;
+    align-items: center;
+    padding-left: 0px;
+    justify-content: flex-end; }
+    footer .footer_title {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-right: 130px;
+      padding-left: 100px;
+      order: 4; }
+    footer .footer_part_1 h3 {
+      padding-left: 5px;
+      padding-bottom: 0px; }
+    footer .footer_part_1_5 {
+      padding-left: 40px; }
+    footer .footer_part_2 {
+      padding-left: 40px; } }
