@@ -294,6 +294,26 @@ body {
             text-decoration: none;
             color: #000000;
 
+            .nouveau {
+                position: relative;
+            }
+
+            .nouveau::before {
+                content: "Nouveau";
+                position: absolute;
+                font-weight: 600;
+                line-height: 16px;
+                font-size: 14px;
+                color: #008756;
+                background-color: #99E2D0;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                width: 15%;
+                text-align: center;
+                right: 15px;
+                top: 15px;
+            }
+
             .illustr_card {
                 box-shadow: 0 4px 15px rgba(0,0,0,0.1);
                 transition: 0,3s;
@@ -304,7 +324,7 @@ body {
                     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
                     filter: brightness(110%);
                 }
-                
+        
                 img {
                     width: 100%;
                     border-top-left-radius: 15px;
@@ -312,18 +332,6 @@ body {
                     height: 233px;
                     object-fit: cover;
                 }
-                    
-                .img-texte {
-                    font-weight: 500;
-                    line-height: 16px;
-                    font-size: 14px;
-                    color: #008756;
-                    background-color: #99E2D0;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    width: 20%;
-                    text-align: center;
-                }  
             
                 .container {
                     padding-top: 10px;
@@ -451,7 +459,23 @@ footer {
         justify-content: space-between;
         
             a {
-                width: 20%;
+                width: 24%;
+    
+                .nouveau::before {
+                    content: "Nouveau";
+                    position: absolute;
+                    font-weight: 600;
+                    line-height: 14px;
+                    font-size: 12px;
+                    color: #008756;
+                    background-color: #99E2D0;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    width: 35%;
+                    text-align: center;
+                    right: 10px;
+                    top: 10px;
+                }
 
                 .illustr_card {
                     width: 100%;
@@ -545,7 +569,23 @@ footer {
         justify-content: space-between;
         
             a {
-                width: 20%;
+                width: 24%;
+
+                .nouveau::before {
+                    content: "Nouveau";
+                    position: absolute;
+                    font-weight: 600;
+                    line-height: 16px;
+                    font-size: 14px;
+                    color: #008756;
+                    background-color: #99E2D0;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    width: 28%;
+                    text-align: center;
+                    right: 10px;
+                    top: 10px;
+                }
 
                 .illustr_card {
                     width: 100%;
