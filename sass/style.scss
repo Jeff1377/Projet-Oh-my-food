@@ -319,6 +319,7 @@ body {
                 box-shadow: 0 4px 15px rgba(0,0,0,0.1);
                 transition: 0,3s;
                 margin-bottom: 20px;
+                border-radius: 0 0 15px 15px;
                 
                 &:hover {
                     cursor:pointer;
@@ -341,8 +342,7 @@ body {
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
                     justify-content: space-between;
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
+                    border-radius: 0 0 15px 15px;
 
                     .description {
                         padding-left: 10px;
@@ -358,12 +358,14 @@ body {
                     
                     .heart {
                         position: relative;
+                        
 
                         i {
                             padding-right: 30px;
                             font-size: 25px;
                             position: absolute;
                             right: 0px;
+                            
                         }
 
                         .fa-solid {
@@ -373,7 +375,7 @@ body {
                             -webkit-background-clip: text;
                             -moz-background-clip: text;
                             opacity: 0;
-                            transition: all 300ms ease-in-out;
+                            transition: all 400ms ease-in-out;
                             
                             &:hover {
                                 cursor:pointer;
