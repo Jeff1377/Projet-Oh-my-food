@@ -9,7 +9,7 @@
                 position: absolute;
                 bottom: 31.5px;
                 left: 20px;
-                color: #353535;
+                color: $color_9;
             }
         }
     }
@@ -19,8 +19,10 @@
 
         img {
             width: 100%;
-            object-fit: cover;
             height: 275px;
+            object-fit: cover;
+            display: block;
+            z-index: 0;
         }
     }
 }
@@ -28,8 +30,11 @@
 #menu {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    background-color: #F7F7F7;
+    background-color: $color_2;
     height: 920px;
+    margin-top: -38px;
+    z-index: 1;
+    position: relative;
 
     .main_titre {
         padding-left: 10px;
@@ -46,13 +51,13 @@
 
         i {
             position: absolute;
-            top: 25px;
+            top: 30px;
             right: 50px;
         }
 
         .fa-solid {
             color: transparent;
-            background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            background-image: $color_4;
             background-clip: text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
@@ -66,9 +71,7 @@
         }  
     }
 
-
     .moment_repas {
-
 
         .titre {
             padding-left: 10px;
@@ -83,17 +86,18 @@
             .ligne {
                 width: 40px;
                 height: 5px;
-                border-bottom: 3px solid #99E2D0;
+                border-bottom: 3px solid $color_3;
             }
         }
 
         .choix {
             width: 100%;
 
+
             a {
                 display: flex;
                 text-decoration: none;
-                color: #000000;
+                color: $color_12;
                 margin-top: 15px;
                 width: 95%;
                 margin-right: auto;
@@ -102,19 +106,56 @@
                 .plat {
                     display: flex;
                     justify-content: space-between;
-                    background-color: #ffffff;
-                    padding-left: 10px;
-                    padding-right: 15px;
+                    background-color: $color_7;
                     width: 100%;
                     border-radius: 15.5px;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+                    overflow: hidden;
+                    animation: menu_apparition 2s ease-in-out;
+
+                    @keyframes menu_apparition {
+                        from {
+                            transform: translateY(50%);
+                            opacity: 0;
+                        }
+        
+                        to {
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+
+                        .menu_check {
+                            margin-right: 0;
+
+                            i {
+                                animation: check_spin 0.5s ease-in-out;
+                                animation-direction: alternate;
+
+                                @keyframes check_spin {
+                                    from {
+                                        transform: rotate(-280deg);
+                                    }
+
+                                    to {
+                                        transform: rotate(0);
+                                    }
+                                }
+                            }
+                        }
+                    }
 
                     .bloc_1 {
-                        width: 80%;
+                        width: 75%;
 
 
                         h3 {
+                            padding-top: 10px;
+                            padding-left: 10px;
                             font-weight: 500;
                             font-size: 18px;
                             line-height: 21px;
@@ -124,6 +165,8 @@
                         }
 
                         h5 {
+                            padding-bottom: 10px;
+                            padding-left: 10px;
                             font-weight: 300;
                             font-size: 15px;
                             line-height: 18px;
@@ -134,8 +177,29 @@
                     }
 
                     .prix {
+                        padding-right: 15px;
                         display: flex;
                         align-items: flex-end;
+                        padding-bottom: 10px;
+                    }
+
+                    .menu_check {
+                        display: flex;
+                        background-color: $color_3;
+                        width: 60px;
+                        height: 59px;
+                        margin-right: -60px;
+                        border-radius: 0 15.5px 15.5px 0;
+                        transition: margin-right 0.5s;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            color: $color_3;
+                            background-color: $color_7;
+                            padding: 5px;
+                            border-radius: 15px;
+                        }
                     }
                 }
             }
@@ -144,7 +208,7 @@
 }
 
 .commander {
-    background-color: #F7F7F7;
+    background-color: $color_2;
     height: 130px;
     width: 100%;
     display: flex;
@@ -160,10 +224,10 @@
             align-items: center;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 35px;
+            margin-top: 22px;
             margin-bottom: 35px;
             height: 50px;
-            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            background: $color_4;
             border-radius: 25px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.25);
             
@@ -175,9 +239,54 @@
     
             h3 {
                 text-align: center;
-                color: #ffffff;
+                color: $color_7;
                 width: 100%;
             }
         }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    #menu {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .commander {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1400px) {
+    #menu {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .commander {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    #menu {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .commander {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

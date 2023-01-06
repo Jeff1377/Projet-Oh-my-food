@@ -1,4 +1,17 @@
-h1, h2, h3, h4, h5, h6, div, ul, li, section, header, form, body, article, footer, nav, a, p, i, input, img {
+$color_1: #EAEAEA;
+$color_2: #F7F7F7;
+$color_3: #99E2D0;
+$color_4: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+$color_5: #9356DC;
+$color_6: #008756;
+$color_7: #ffffff;
+$color_8: #FF79DA;
+$color_9: #353535;
+$color_10: #F5EDFF;
+$color_11: #7E7E7E;
+$color_12: #000000;
+
+h1, h2, h3, h4, h5, h6, div, ul, li, section, header, main, form, body, article, footer, nav, a, p, i, input, img {
     margin: 0;
     padding: 0;
 }
@@ -48,6 +61,7 @@ p {
 body {
     max-width: 767px;
     height: 100%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     font-family: 'Roboto', arial, sans-serif;
@@ -58,7 +72,7 @@ body {
     $animation-count: 2;
     position: fixed;
     inset: 0;
-    background: #FF79DA;
+    background: $color_8;
     opacity: 0.9;
     display: flex;
     z-index: 3;
@@ -71,7 +85,7 @@ body {
             height: 100px;
             width: 100px;
             border-right: 10px solid transparent;
-            border-top: 10px solid #99E2D0;
+            border-top: 10px solid $color_3;
             border-radius: 50%;
             animation: spin $animation-duration infinite ease-in-out;
             animation-iteration-count: 2;
@@ -94,7 +108,7 @@ body {
     display: flex;
     width: 100%;
     height: 63px;
-    background-color: #ffffff;
+    background-color: $color_7;
     font-family: 'Shrikhand', arial, cursive;
 
     h1 {
@@ -111,7 +125,7 @@ body {
     align-items:center;
     width: 100%;
     height: 50px;
-    background-color: #EAEAEA;
+    background-color: $color_1;
     box-shadow: inset 0px 4px 5px 0px rgba(0,0,0,0.2);
 
     #recherche_1 {
@@ -127,7 +141,7 @@ body {
             
             input {
                 height: 19px;
-                background-color: #EAEAEA;
+                background-color: $color_1;
                 border: none;
                 outline: none;
                 font-weight: 500;
@@ -139,9 +153,9 @@ body {
 }
 
 #header_fin {
-    background-color: #F7F7F7;
+    background-color: $color_2;
     width: 100%;
-    height: 300px;
+    height: 285px;
 
     .titre_header {
         margin-left: auto;
@@ -162,7 +176,7 @@ body {
 
         h6 {
         text-align: center;
-        color: #353535;
+        color: $color_9;
         }
     }
 
@@ -177,7 +191,7 @@ body {
             margin-right: auto;
             margin-top: 27px;
             height: 50px;
-            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            background: $color_4;
             border-radius: 25px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.25);
             
@@ -190,7 +204,7 @@ body {
 
             h3 {
                 text-align: center;
-                color: #ffffff;
+                color: $color_7;
                 width: 100%;
             }
         }
@@ -199,7 +213,7 @@ body {
 
 #fonctionnement {
     width: 100%;
-    height: 550px;
+    height: 470px;
 
     #fonctionnement_1 {
         padding-top: 48px;
@@ -224,7 +238,7 @@ body {
             .card {
                 width: 90%;
                 display: flex;
-                background-color: #F7F7F7;
+                background-color: $color_2;
                 padding: 25px 0px 25px 0px;
                 margin-right: auto;
                 margin-left: auto;
@@ -235,18 +249,18 @@ body {
                     cursor: pointer;
                     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
                     transition: background-color 500ms;
-                    background-color: #F5EDFF;
+                    background-color: $color_10;
 
                     i {
-                        color: #9356DC;
+                        color: $color_4;
                     }
                 }
                 
                 p {
                     position: relative;
                     right: 10px;
-                    background-color: #9356DC;
-                    color: #ffffff;
+                    background-color: $color_4;
+                    color: $color_7;
                     font-weight: 500;
                     font-size: 14,1818px;
                     line-height: 17px;
@@ -255,7 +269,7 @@ body {
                 }
 
                 i {
-                    color: #7E7E7E;
+                    color: $color_11;
                     position: relative;
                     left: 10px;
                     padding-top: 5px;
@@ -267,7 +281,7 @@ body {
                     padding-top: 5px;
 
                     h3 {
-                        color: #000000;
+                        color: $color_12;
                         margin-left: auto;
                         margin-right: auto;
                     }  
@@ -280,11 +294,11 @@ body {
 #main {
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #F7F7F7;
-    height: 1490px;
+    background-color: $color_2;
+    height: 1460px;
 
     #card_titre {
-        padding-top: 60px;
+        padding-top: 50px;
         padding-bottom: 25px;
     }
 
@@ -294,7 +308,7 @@ body {
         
         a {
             text-decoration: none;
-            color: #000000;
+            color: $color_12;
 
             .nouveau {
                 position: relative;
@@ -306,8 +320,8 @@ body {
                 font-weight: 600;
                 line-height: 16px;
                 font-size: 14px;
-                color: #008756;
-                background-color: #99E2D0;
+                color: $color_6;
+                background-color: $color_3;
                 padding-top: 8px;
                 padding-bottom: 8px;
                 width: 25%;
@@ -334,11 +348,12 @@ body {
                     border-top-right-radius: 15px;
                     height: 233px;
                     object-fit: cover;
+                    display: block;
                 }
             
                 .container {
                     padding-top: 10px;
-                    background-color: #ffffff;
+                    background-color: $color_7;
                     display: flex;
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
@@ -371,7 +386,7 @@ body {
 
                         .fa-solid {
                             color: transparent;
-                            background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+                            background-image: $color_4;
                             background-clip: text;
                             -webkit-background-clip: text;
                             -moz-background-clip: text;
@@ -391,8 +406,8 @@ body {
 }
 
 footer {
-    color: #ffffff;
-    background-color: #353535;
+    color: $color_7;
+    background-color: $color_9;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -434,7 +449,7 @@ footer {
 
     a {
         text-decoration: none;
-        color: #ffffff;
+        color: $color_7;
     }
 }
 
@@ -477,8 +492,8 @@ footer {
                     font-weight: 600;
                     line-height: 16px;
                     font-size: 14px;
-                    color: #008756;
-                    background-color: #99E2D0;
+                    color: $color_6;
+                    background-color: $color_3;
                     padding-top: 8px;
                     padding-bottom: 8px;
                     width: 35%;
@@ -587,8 +602,127 @@ footer {
                     font-weight: 600;
                     line-height: 16px;
                     font-size: 14px;
-                    color: #008756;
-                    background-color: #99E2D0;
+                    color: $color_6;
+                    background-color: $color_3;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    width: 35%;
+                    text-align: center;
+                    right: 10px;
+                    top: 10px;
+                }
+
+                .illustr_card {
+                    width: 100%;
+
+                    img {
+                        height: 100px;
+                    }
+
+                    .container {
+                        height: 70px;
+                    
+                        .description {
+
+                            h2 {
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 19px;
+                            }
+
+                            p {
+                                font-weight: 200;
+                                font-size: 14px;
+                                line-height: 16px;
+                            }
+                        }
+
+                        .heart {
+
+                            i {
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        flex-direction: row;
+        height: 100px;
+        align-items: center;
+        padding-left: 0px;
+        justify-content: flex-end;
+
+        .footer_title {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-right: 130px;
+            padding-left: 100px;
+            order: 4;
+        }
+
+        .footer_part_1 {
+
+            h3 {
+                padding-left: 5px;
+                padding-bottom: 0px;
+            }
+        }
+
+        .footer_part_1_5 {
+            padding-left: 40px;
+        }
+
+        .footer_part_2 {
+            padding-left: 40px;
+        }
+    }
+}
+
+@media screen and (min-width:1400px) {
+    body {
+        max-width: 1400px;
+
+    }
+
+    #fonctionnement {
+        height: 300px;
+
+        #fonctionnement_2 {
+            flex-direction: row;
+
+            a {
+                .card {
+
+                    i {
+                        left: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    #main {
+        height: 390px;
+
+        #main_cards {
+        flex-direction: row;
+        justify-content: space-between;
+        
+            a {
+                width: 24%;
+
+                .nouveau::before {
+                    content: "Nouveau";
+                    position: absolute;
+                    font-weight: 600;
+                    line-height: 16px;
+                    font-size: 14px;
+                    color: $color_6;
+                    background-color: $color_3;
                     padding-top: 8px;
                     padding-bottom: 8px;
                     width: 35%;
