@@ -27,7 +27,12 @@
     }
 }
 
-#menu {
+.menu.menunote {
+
+    height: 990px;
+}
+
+.menu {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     background-color: $color_2;
@@ -48,7 +53,7 @@
             font-size: 28px;
             line-height: 41px;
         }
-
+        
         i {
             position: absolute;
             top: 30px;
@@ -59,8 +64,6 @@
             color: transparent;
             background-image: $color_4;
             background-clip: text;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
             opacity: 0;
             transition: all 400ms ease-in-out;
             
@@ -103,7 +106,19 @@
                 margin-right: auto;
                 margin-left: auto;
 
+                .entree {
+                    animation: menu_apparition 2s ease-in-out 0ms;
+                }
+
                 .plat {
+                    animation: menu_apparition 2s ease-in-out 300ms;
+                }
+
+                .dessert {
+                    animation: menu_apparition 2s ease-in-out 600ms;
+                }
+
+                .repas {
                     display: flex;
                     justify-content: space-between;
                     background-color: $color_7;
@@ -111,7 +126,7 @@
                     border-radius: 15.5px;
                     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
                     overflow: hidden;
-                    animation: menu_apparition 2s ease-in-out;
+                    
 
                     @keyframes menu_apparition {
                         from {

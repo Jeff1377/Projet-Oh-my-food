@@ -45,42 +45,34 @@ body {
   margin-left: auto;
   font-family: 'Roboto', arial, sans-serif; }
 
-/*.loader {
-    $animation-duration: 1s;
-    $animation-count: 2;
-    position: fixed;
-    inset: 0;
-    background: $color_8;
-    opacity: 0.9;
-    display: flex;
-    z-index: 3;
-    justify-content: center;
-    align-items: center;
-    animation: loader 200ms $animation-duration*$animation-count forwards;
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #FF79DA;
+  opacity: 0.9;
+  display: flex;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  animation: loader 200ms 2s forwards; }
+  .loader::after {
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #99E2D0;
+    border-radius: 50%;
+    animation: spin 1s infinite ease-in-out;
+    animation-iteration-count: 2; }
 
-        &::after {
-            content: "";
-            height: 100px;
-            width: 100px;
-            border-right: 10px solid transparent;
-            border-top: 10px solid $color_3;
-            border-radius: 50%;
-            animation: spin $animation-duration infinite ease-in-out;
-            animation-iteration-count: 2;
-        }
-    
-    @keyframes spin {
-        to {
-            transform: rotate(360deg);
-        }
-    }
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
 
-    @keyframes loader {
-        to {
-            transform: translateY(-100vh);
-        }
-    }
-}*/
+@keyframes loader {
+  to {
+    transform: translateY(-100vh); } }
+
 #bloc_logo {
   display: flex;
   width: 100%;
@@ -105,7 +97,8 @@ body {
     display: flex; }
     #recherche #recherche_1 i {
       width: 12px;
-      height: 16px; }
+      height: 16px;
+      margin-left: 130px; }
     #recherche #recherche_1 form {
       padding-left: 10px; }
       #recherche #recherche_1 form input {
@@ -146,7 +139,7 @@ body {
       margin-right: auto;
       margin-top: 27px;
       height: 50px;
-      background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+      background: linear-gradient(to top, #9356DC, #FF79DA);
       border-radius: 25px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); }
       #header_fin a .btn_violet_gros:hover {
@@ -192,14 +185,14 @@ body {
           transition: background-color 500ms;
           background-color: #F5EDFF; }
           #fonctionnement #fonctionnement_2 a .card:hover i {
-            color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%); }
+            color: linear-gradient(to top, #9356DC, #FF79DA); }
         #fonctionnement #fonctionnement_2 a .card p {
           position: relative;
           right: 10px;
-          background-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+          background-color: linear-gradient(to top, #9356DC, #FF79DA);
           color: #ffffff;
           font-weight: 500;
-          font-size: 14,1818px;
+          font-size: 14px;
           line-height: 17px;
           padding: 5px 8px 5px 8px;
           border-radius: 20px; }
@@ -249,7 +242,7 @@ body {
         top: 15px; }
       #main #main_cards a .illustr_card {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: 0,3s;
+        transition: 300ms;
         margin-bottom: 20px;
         border-radius: 0 0 15px 15px; }
         #main #main_cards a .illustr_card:hover {
@@ -277,24 +270,23 @@ body {
               padding-bottom: 3px; }
             #main #main_cards a .illustr_card .container .description p {
               padding-bottom: 20px; }
-          #main #main_cards a .illustr_card .container .heart {
-            position: relative; }
-            #main #main_cards a .illustr_card .container .heart i {
-              padding-right: 30px;
-              font-size: 25px;
-              position: absolute;
-              right: 0px; }
-            #main #main_cards a .illustr_card .container .heart .fa-solid {
-              color: transparent;
-              background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-              background-clip: text;
-              -webkit-background-clip: text;
-              -moz-background-clip: text;
-              opacity: 0;
-              transition: all 400ms ease-in-out; }
-              #main #main_cards a .illustr_card .container .heart .fa-solid:hover {
-                cursor: pointer;
-                opacity: 1; }
+    #main #main_cards .heart {
+      position: relative; }
+      #main #main_cards .heart i {
+        padding-right: 30px;
+        font-size: 25px;
+        position: absolute;
+        right: 0px;
+        bottom: 50px; }
+      #main #main_cards .heart .fa-solid {
+        color: transparent;
+        background-image: linear-gradient(to top, #9356DC, #FF79DA);
+        background-clip: text;
+        opacity: 0;
+        transition: all 400ms ease-in-out; }
+        #main #main_cards .heart .fa-solid:hover {
+          cursor: pointer;
+          opacity: 1; }
 
 footer {
   color: #ffffff;
@@ -537,7 +529,10 @@ footer {
     display: block;
     z-index: 0; }
 
-#menu {
+.menu.menunote {
+  height: 990px; }
+
+.menu {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #F7F7F7;
@@ -545,45 +540,43 @@ footer {
   margin-top: -38px;
   z-index: 1;
   position: relative; }
-  #menu .main_titre {
+  .menu .main_titre {
     padding-left: 10px;
     padding-top: 30px;
     display: flex;
     position: relative; }
-    #menu .main_titre h1 {
+    .menu .main_titre h1 {
       font-family: 'Shrikhand', arial, cursive;
       font-weight: 400;
       font-size: 28px;
       line-height: 41px; }
-    #menu .main_titre i {
+    .menu .main_titre i {
       position: absolute;
       top: 30px;
       right: 50px; }
-    #menu .main_titre .fa-solid {
+    .menu .main_titre .fa-solid {
       color: transparent;
-      background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+      background-image: linear-gradient(to top, #9356DC, #FF79DA);
       background-clip: text;
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
       opacity: 0;
       transition: all 400ms ease-in-out; }
-      #menu .main_titre .fa-solid:hover {
+      .menu .main_titre .fa-solid:hover {
         cursor: pointer;
         opacity: 1; }
-  #menu .moment_repas .titre {
+  .menu .moment_repas .titre {
     padding-left: 10px;
     padding-top: 30px; }
-    #menu .moment_repas .titre p {
+    .menu .moment_repas .titre p {
       font-weight: 300;
       font-size: 16px;
       line-height: 19px; }
-    #menu .moment_repas .titre .ligne {
+    .menu .moment_repas .titre .ligne {
       width: 40px;
       height: 5px;
       border-bottom: 3px solid #99E2D0; }
-  #menu .moment_repas .choix {
+  .menu .moment_repas .choix {
     width: 100%; }
-    #menu .moment_repas .choix a {
+    .menu .moment_repas .choix a {
       display: flex;
       text-decoration: none;
       color: #000000;
@@ -591,15 +584,20 @@ footer {
       width: 95%;
       margin-right: auto;
       margin-left: auto; }
-      #menu .moment_repas .choix a .plat {
+      .menu .moment_repas .choix a .entree {
+        animation: menu_apparition 2s ease-in-out 0ms; }
+      .menu .moment_repas .choix a .plat {
+        animation: menu_apparition 2s ease-in-out 300ms; }
+      .menu .moment_repas .choix a .dessert {
+        animation: menu_apparition 2s ease-in-out 600ms; }
+      .menu .moment_repas .choix a .repas {
         display: flex;
         justify-content: space-between;
         background-color: #ffffff;
         width: 100%;
         border-radius: 15.5px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        overflow: hidden;
-        animation: menu_apparition 2s ease-in-out; }
+        overflow: hidden; }
 
 @keyframes menu_apparition {
   from {
@@ -608,12 +606,12 @@ footer {
   to {
     transform: translateY(0);
     opacity: 1; } }
-        #menu .moment_repas .choix a .plat:hover {
+        .menu .moment_repas .choix a .repas:hover {
           cursor: pointer;
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); }
-          #menu .moment_repas .choix a .plat:hover .menu_check {
+          .menu .moment_repas .choix a .repas:hover .menu_check {
             margin-right: 0; }
-            #menu .moment_repas .choix a .plat:hover .menu_check i {
+            .menu .moment_repas .choix a .repas:hover .menu_check i {
               animation: check_spin 0.5s ease-in-out;
               animation-direction: alternate; }
 
@@ -622,9 +620,9 @@ footer {
     transform: rotate(-280deg); }
   to {
     transform: rotate(0); } }
-        #menu .moment_repas .choix a .plat .bloc_1 {
+        .menu .moment_repas .choix a .repas .bloc_1 {
           width: 75%; }
-          #menu .moment_repas .choix a .plat .bloc_1 h3 {
+          .menu .moment_repas .choix a .repas .bloc_1 h3 {
             padding-top: 10px;
             padding-left: 10px;
             font-weight: 500;
@@ -633,7 +631,7 @@ footer {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden; }
-          #menu .moment_repas .choix a .plat .bloc_1 h5 {
+          .menu .moment_repas .choix a .repas .bloc_1 h5 {
             padding-bottom: 10px;
             padding-left: 10px;
             font-weight: 300;
@@ -642,12 +640,12 @@ footer {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden; }
-        #menu .moment_repas .choix a .plat .prix {
+        .menu .moment_repas .choix a .repas .prix {
           padding-right: 15px;
           display: flex;
           align-items: flex-end;
           padding-bottom: 10px; }
-        #menu .moment_repas .choix a .plat .menu_check {
+        .menu .moment_repas .choix a .repas .menu_check {
           display: flex;
           background-color: #99E2D0;
           width: 60px;
@@ -657,7 +655,7 @@ footer {
           transition: margin-right 0.5s;
           justify-content: center;
           align-items: center; }
-          #menu .moment_repas .choix a .plat .menu_check i {
+          .menu .moment_repas .choix a .repas .menu_check i {
             color: #99E2D0;
             background-color: #ffffff;
             padding: 5px;
@@ -681,7 +679,7 @@ footer {
       margin-top: 22px;
       margin-bottom: 35px;
       height: 50px;
-      background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+      background: linear-gradient(to top, #9356DC, #FF79DA);
       border-radius: 25px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); }
       .commander a .btn:hover {
