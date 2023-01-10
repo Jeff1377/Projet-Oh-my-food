@@ -282,6 +282,8 @@ body {
         color: transparent;
         background-image: linear-gradient(to top, #9356DC, #FF79DA);
         background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
         opacity: 0;
         transition: all 400ms ease-in-out; }
         #main #main_cards .heart .fa-solid:hover {
@@ -558,6 +560,8 @@ footer {
       color: transparent;
       background-image: linear-gradient(to top, #9356DC, #FF79DA);
       background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
       opacity: 0;
       transition: all 400ms ease-in-out; }
       .menu .main_titre .fa-solid:hover {
