@@ -696,7 +696,7 @@ footer {
         width: 100%; }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  #menu {
+  .menu {
     width: 70%;
     margin-left: auto;
     margin-right: auto; }
@@ -706,7 +706,7 @@ footer {
     margin-right: auto; } }
 
 @media screen and (min-width: 992px) and (max-width: 1400px) {
-  #menu {
+  .menu {
     width: 70%;
     margin-left: auto;
     margin-right: auto; }
@@ -716,7 +716,7 @@ footer {
     margin-right: auto; } }
 
 @media screen and (min-width: 1400px) {
-  #menu {
+  .menu {
     width: 70%;
     margin-left: auto;
     margin-right: auto; }
