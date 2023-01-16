@@ -532,7 +532,10 @@ footer {
     z-index: 0; }
 
 .menu.menunote {
-  height: 990px; }
+  height: 990px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto; }
 
 .menu {
   border-top-left-radius: 40px;
@@ -696,7 +699,7 @@ footer {
         width: 100%; }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  #menu {
+  .menu {
     width: 70%;
     margin-left: auto;
     margin-right: auto; }
@@ -706,7 +709,7 @@ footer {
     margin-right: auto; } }
 
 @media screen and (min-width: 992px) and (max-width: 1400px) {
-  #menu {
+  .menu {
     width: 70%;
     margin-left: auto;
     margin-right: auto; }
@@ -716,7 +719,7 @@ footer {
     margin-right: auto; } }
 
 @media screen and (min-width: 1400px) {
-  #menu {
+  .menu {
     width: 70%;
     margin-left: auto;
     margin-right: auto; }
